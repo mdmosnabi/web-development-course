@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+  
+  .container {
+    position: relative;
+    height: 400px;
+    border: 1px solid #ddd;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+  }
+  
+  .box {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+  }
+
+  .static {
+    position: static;
+    
+  }
+
+  .sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  
+  .relative {
+    position: relative;
+    top: 100px;
+    left: 50px;
+  }
+  
+  .absolute {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+  }
+  
+  .fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 10vh;
+    text-align: center;
+    text-align-last: center;
+    background-color: #FF5722;
+  }
+  
