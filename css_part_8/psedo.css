@@ -1,34 +1,34 @@
 /* Pseudo-elements */
     /* Adds content before each paragraph */
-    /* p::before {
+    p::before {
         content: "Note: ";
         font-weight: bold;
         color: red;
-    } */
+    }
 
     /* Adds content after each paragraph */
-    /* p::after {
-        content: " (read more)";
+    p::after {
+        content: " read more";
         color: rebeccapurple;
-    } */
+    }
 
     /* Styles the first letter of the paragraph */
-    /* p::first-letter {
+    p::first-letter {
         font-size: 2em;
         color: purple;
-    } */
+    }
 
     /* Styles the first line of text in the paragraph */
-    /* p::first-line {
+    p::first-line {
         font-weight: bold;
         color: darkgreen;
-    } */
+    }
 
     /* Changes style for selected text */
-    /* ::selection {
+    ::selection {
         background-color: rgb(174, 19, 169);
         color: rgb(17, 17, 17);
-    } */
+    }
 
     /* Pseudo-classes */
     /* Style a link when hovered */
@@ -37,17 +37,19 @@
         /* cursor: not-allowed; */
         /* cursor: alias; */
         /* cursor: copy; */
+        cursor: pointer;
+        text-decoration: none;
     }
 
     /* Style a link when clicked */
-    /* a:active {
+    a:active {
         color: rgb(152, 21, 217);
-    } */
+    }
 
     /* Style an element when it gains focus */
-    /* input:focus {
+    input:focus {
         outline: 2px solid red;
-    } */
+    }
 
     /* Target the first child of its parent */
     p:first-child {

@@ -16,7 +16,9 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.4s ease, transform 0.4s ease;
+            /* property name | duration | easing function | delay */
+    transition: background-color 0.5s ease-in-out 0.5s;
+    
   }
   
   .transition-button:hover {
@@ -30,16 +32,16 @@
     width: 100px;
     height: 100px;
     background-color: #e74c3c;
-    animation: bounce 2s ease-in-out infinite;
+    animation: I_am_Animations 2s ease-in-out infinite;
   }
   
   /* Keyframes for the box animation */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-50px);
+  @keyframes I_am_Animations {
+    from {background-color: red;}
+    to {
+      background-color: yellow;
+      transform: scale(1.5);
+      
     }
   }
   

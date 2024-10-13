@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables and Functions</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <h1>Understanding CSS Variables and Functions</h1>
+
+    <div class="content">
+        <h2>CSS Variables</h2>
+        <p>CSS variables (also known as custom properties) allow you to store values that can be reused throughout your CSS. They make it easier to manage and update styles consistently.</p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            In the stylesheet, we defined a variable for the primary color:
+            <pre>:root { '--primary-color': #3498db; }</pre>
+            This variable is used for the heading and box background color. If we change the variable, the color will update everywhere it's used.
+        </div>
+
+        <h2>CSS Functions</h2>
+        <p>CSS functions are used to perform calculations or transformations on styles. Some common functions include <code>calc()</code>, <code>rotate()</code>, <code>linear-gradient()</code>, and more.</p>
+
+        <div class="example">
+            <strong>Example 1:</strong><br>
+            The <code>calc()</code> function allows us to do math in CSS. We use it here to adjust the font size dynamically:
+            <pre>font-size: calc(var(--font-size-large) + 8px);</pre>
+        </div>
+
+        <div class="example rotate-box">
+            <strong>Example 2:</strong><br>
+            Hover over this box to see the effect of the <code>rotate()</code> function.
+        </div>
+
+        <div class="example gradient-text">
+            <strong>Example 3:</strong><br>
+            This text uses a <code>linear-gradient()</code> function to create a gradient effect.
+        </div>
+    </div>
+
+</body>
+</html>
