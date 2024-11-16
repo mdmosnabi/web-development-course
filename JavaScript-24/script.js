@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function dely(time) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -19,7 +19,7 @@ async function show(){
 }
 show()
 // console.log('3rd');
-=======
+
 function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
@@ -62,4 +62,3 @@ function delay(ms) {
   }
   
   main();
->>>>>>> 42101ff697a10bbc65a4416339902fd48d11e7f0
