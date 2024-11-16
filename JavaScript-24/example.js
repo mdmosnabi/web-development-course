@@ -67,4 +67,3 @@ show().then(
     
   }
 );
-console.log(300);
