@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // function Mult(a,b,callback) {
 //   let c = a*b
 //   console.log(c);
@@ -68,7 +68,6 @@ show().then(
   }
 );
 console.log(300);
-=======
 // setTimeout( ForCallBack, 2000);
   
 // function ForCallBack(){
@@ -136,4 +135,3 @@ async function main() {
 
 main();
 */
->>>>>>> 42101ff697a10bbc65a4416339902fd48d11e7f0
