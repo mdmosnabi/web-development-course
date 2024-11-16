@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List :</h1>
+        <div id="line"></div>
+        <div id="showTask">
+            <section class="flex item">
+                <div class="text">1. what are you do ?</div>
+                <div class="flex RC-btn">
+                    <button>Remove</button>
+                    <button>Change</button>
+                </div>
+            </section>
+        </div>
+
+        <div hidden id="inp">
+            <input  class="input" name="input" type="text" placeholder="Enter a task">
+            <button onclick="OK()" class="BTN">OK</button>
+        </div>
+
+        <button onclick="updateBTN()" id="updateBTN" class="BTN">Update</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

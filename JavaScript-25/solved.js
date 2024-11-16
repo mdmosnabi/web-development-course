@@ -1,22 +1,20 @@
-
-function numberChack(num){
-    return new Promise((resolve,reject)=>{
-        if (num % 2 == 0) {
+function checkNumber(num){
+    return new Promise((resolve, reject) => { 
+        if (num%2 ==0) {
             resolve(num)
         }else{
             reject(num)
         }
-    })
+     })
 }
-
-numberChack(5).then(
-    (e)=>{
-        console.log('the number is Even '+e);
+checkNumber(785).then(
+    (a)=>{
+        console.log('the number is event',a);
         
     }
 ).catch(
-    (e)=>{
-        console.log('The number is Odd '+e);
+    (a)=>{
+        console.log('the number is Odd',a);
         
     }
 )

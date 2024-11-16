@@ -1,11 +1,19 @@
-function work(){
-    let a =document.getElementById('target')
-    a.innerHTML = 'ss'
-}
+// let element = document.getElementById('button')
 
-function ToUppercase() {
-    const inputElement = event.target;
-    inputElement.value = inputElement.value.toUpperCase();
-}
+// function work() { 
+//     document.getElementById('target').innerHTML = ' hello sister'
+//     alert('ok')
+//     // element.removeEventListener('click',work)
+// }
 
-// document.getElementById('button').addEventListener('mouseover',work)
+// element.addEventListener('click',work)
+
+document.getElementById('div').addEventListener('click',()=>{
+    alert('i am div ')
+
+})
+
+document.getElementById('para').addEventListener('click',()=>{
+    alert('i am para ')
+    event.stopPropagation()
+})

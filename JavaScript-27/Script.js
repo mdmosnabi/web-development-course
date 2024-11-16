@@ -1,31 +1,19 @@
-let getElement = document.getElementById('aa') //unique selectors
+// let getID = document.getElementById('id')
 
-let getClass = document.getElementsByClassName('xx')
-
-// Array.from(getClass).forEach((Element)=>{
-//     console.log(Element.innerHTML);
+// getID.innerHTML = 'sssd'
+// let getClass = document.getElementsByClassName('aa')
+// Array.from(getClass).forEach((item)=>{
+//     console.log(item.innerHTML = 'ss');
+    
+// })
+// let getTag = document.getElementsByTagName('h1')
+// Array.from(getTag).forEach((item)=>{
+//     console.log(item.innerHTML = 'ss');
     
 // })
 
-let getTag = document.getElementsByTagName('div')
-
-// Array.from(getTag).forEach((Element)=>{
-//     console.log(Element.innerHTML);
+let getQu = document.querySelectorAll('.aa')
+getQu.forEach(item=>{
+    console.log(item);
     
-// })
-// console.log(getTag);
-
-let getName = document.getElementsByName('abc')
-
-// getName.forEach(element => {
-//     console.log(element);
-    
-// });
-
-// console.log(getName);
-
-let getQuery = document.querySelector('.xx')
-let getQueryAll = document.querySelectorAll('.xx')
-// console.log(getQuery.innerHTML);
-console.log(getQueryAll);
-
+})
