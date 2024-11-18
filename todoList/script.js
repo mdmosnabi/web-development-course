@@ -2,68 +2,59 @@ let totalTask = []
 
 function Update() {
     if (localStorage.getItem('data')) {
-        let a = document.getElementById('showTask')
-        a.innerHTML = ''
         totalTask = JSON.parse(localStorage.getItem('data'))
 
-        totalTask.forEach((element ,index) => {
-            a.innerHTML += `<section class="flex item">
-                <div class="text">${index + 1}. ${element}</div>
-                <div class="flex RC-btn">
-                    <button onclick="Remove(${index})">Remove</button>
-                    <button onclick="Change(${index})">Change</button>
+        let a = document.getElementById('itemcont')
+        a.innerHTML = ''
+        totalTask.forEach((item, index) => {
+            a.innerHTML += `<li class="item">
+                <h1 class="working">${index+1}.${totalTask[index]}</h1>
+                <div class="RC-btn">
+                    <button onclick="Remove(${index})" class="btn">Remove</button>
+                    <button onclick="Change(${index})" class="btn">Change</button>
                 </div>
-            </section>`
-        });
-        
-
-    }
-    else {
-        document.getElementById('showTask').innerHTML = ' Hare is no task please add a task'
+            </li>`
+        })
     }
 }
 Update()
 
-function updateBTN(change=false) {
-    if (change) {
-        document.getElementById('inp').removeAttribute('hidden')
+function Ok() {
+    let input = document.getElementById('input')
+    if (input.value.length>3) {
+        
+        totalTask.push(input.value)
+    }
+    localStorage.setItem('data', JSON.stringify(totalTask))
+    Update()
+    input.value = ''
+}
+
+function UpdateBTN(ch=false) {
+    let a =document.getElementById('inputCon')
+    if (ch) {
+        a.removeAttribute('hidden')
+    } else {
+        a.toggleAttribute('hidden')
+    }
+    if (a.hasAttribute('hidden')) {
+        document.getElementById('UpdateBTN').innerHTML = 'Update'
     }
     else{
-
-        document.getElementById('inp').toggleAttribute('hidden')
-        if (!document.getElementById('inp').hasAttribute('hidden')) {
-            event.target.innerHTML = 'Hide'
-        }
-        else if (document.getElementById('inp').hasAttribute('hidden')) {
-            event.target.innerHTML = 'Update'
-        }
+        document.getElementById('UpdateBTN').innerHTML = 'Hide'
     }
 }
-
-async function OK() {
-    const data = document.getElementsByName('input')
-    if (data[0].value !='') {
-        
-        totalTask.push(data[0].value)
-        data[0].value =''
-    
-        await localStorage.setItem('data', JSON.stringify(totalTask))
-        Update()
-    }
-    
-
-}
-
-async function Remove(index){
+function Remove(index) {
     totalTask = totalTask.filter((_,i)=>i!=index)
-    await localStorage.setItem('data', JSON.stringify(totalTask))
+    localStorage.setItem('data',JSON.stringify(totalTask))
     Update()
-}
-
-async function Change(index){
-    let a=document.getElementsByName('input')[0]
-    a.value = totalTask[index]
-    await updateBTN(true)
-    await Remove(index)
     
+}
+function Change(index) {
+    let a = document.getElementById('input')
+    a.value = totalTask[index]
+    UpdateBTN(true)
+    totalTask = totalTask.filter((_,i)=>i!=index)
+    localStorage.setItem('data',JSON.stringify(totalTask))
+    Update()
 }
